@@ -1,5 +1,7 @@
 import React0, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Button, Container, Form, Navbar } from "react-bootstrap";
+import { Link, useNavigate } from "react-router-dom";
+import { ButtonTest } from "./styles";
 
 
 function Login() {
@@ -16,29 +18,48 @@ function Login() {
     }
 
     return (
-        <div className="d-flex justify-content-center mt-5">
-            <form>
-                <h1>Entre ou Cadastre-se</h1>
-                <div class="form-group">
-                    <label>E-mail</label>
-                    <input type="email" class="form-control" placeholder="Enter email" />
-                    <small class="form-text text-muted">Coloque nesse campo seu email de login</small>
-                </div>
+        <>
+            {/* inicio navbar */}
+            <Navbar bg="dark">
+                <Container>
+                    <Navbar.Brand>
+                        <Link to="/" style={{ color: "#FFF", textDecoration: 'none' }}>
+                            Home
+                        </Link>
+                    </Navbar.Brand>
+                    <Navbar.Toggle />
+                    <Navbar.Collapse className="justify-content-end">
+                        <Navbar.Text>
+                            <Link to="/login" style={{ color: "#FFF", textDecoration: 'none' }}>
+                                Login / cadastrar
+                            </Link>
+                        </Navbar.Text>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
+            {/* fim navbar */}
 
-                <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" class="form-control" placeholder="Password" />
-                </div>
-                <div class="form-check">
-                    <input type="checkbox" class="form-check-input" />
-                    <label class="form-text text-muted">Me mantenha conectado!</label>
-                </div>
+            <div className="d-flex justify-content-center mt-5">
+                <Form>
+                    <Form.Group className="mb-3">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Text className="text-muted">
+                            We'll never share your email with anyone else.
+                        </Form.Text>
+                    </Form.Group>
 
-                <button onClick={() => { login() }} type="button" className="btn btn-primary mt-3">
-                    Entrar
-                </button>
-            </form>
-        </div>
+                    <Form.Group className="mb-3">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control type="password" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                    <ButtonTest onClick={() => console.log("sdjsdhsj")}>aaaaaaaaaaaaaa</ButtonTest>
+                </Form>
+            </div>
+        </>
     )
 }
 
