@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"; // CSS do bootstrap
 
 import Login from "./Screens/Login/index";
 import Home from "./Screens/Home/index";
+import Cadastro from "./Screens/Cadastro/index"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ComponentExample from "./Screens/ComponentExample";
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/teste" element={<ComponentExample />} />
+        <Route path="/cadastro" element={<Cadastro />} />
       </Route>
     </Routes>
   </BrowserRouter>,

@@ -1,7 +1,6 @@
 import React0, { useState } from "react";
 import { Button, Container, Form, Navbar } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { ButtonTest } from "./styles";
 
 
 function Login() {
@@ -53,10 +52,11 @@ function Login() {
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button onClick={() => {
+                        login();
+                    }} variant="primary " type="submit">
                         Submit
                     </Button>
-                    <ButtonTest onClick={() => console.log("sdjsdhsj")}>aaaaaaaaaaaaaa</ButtonTest>
                 </Form>
             </div>
         </>
