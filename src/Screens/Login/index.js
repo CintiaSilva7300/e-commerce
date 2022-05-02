@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Navbar } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+// import InputText from "../../Components/InputText";
+import Img from './Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
 
 
 function Login() {
@@ -23,7 +25,7 @@ function Login() {
                 <Container>
                     <Navbar.Brand>
                         <Link to="/" style={{ color: "#FFF", textDecoration: 'none' }}>
-                            Home
+                            <img src={Img} width="170" height="50" />
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
@@ -40,23 +42,34 @@ function Login() {
 
             <div className="d-flex justify-content-center mt-5">
                 <Form>
+                    <h1 className="d-flex justify-content-center mt-2"> Entrar</h1>
                     <Form.Group className="mb-3">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label>E-mail </Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
                         <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
+                            Nunca compartilharemos seu e-mail com mais ninguém.
                         </Form.Text>
                     </Form.Group>
 
                     <Form.Group className="mb-3">
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" />
+                        <Form.Label>Senha</Form.Label>
+                        <Form.Control type="senha" />
                     </Form.Group>
                     <Button onClick={() => {
                         login();
-                    }} variant="primary " type="submit">
-                        Submit
-                    </Button>
+                    }} variant="dark">Submit</Button>
+
+                    <div>
+                        <Link to="/cadastro">
+                            <Form.Text className=" text-muted">
+                                Não é cadastrado?
+                            </Form.Text>
+
+                        </Link>
+                    </div>
+
+
+
                 </Form>
             </div>
         </>

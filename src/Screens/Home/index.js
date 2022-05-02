@@ -1,6 +1,8 @@
 import React from "react";
-import { Card, Col, Container, Nav, Navbar, NavDropdown, Row } from "react-bootstrap";
+import { Card, Col, Container, Nav, Navbar, NavDropdown, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Img from '../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
+import InputText from "../../Components/InputText";
 
 
 
@@ -12,7 +14,7 @@ function Home() {
                 <Container>
                     <Navbar.Brand>
                         <Link to="/" style={{ color: "#FFF", textDecoration: 'none' }}>
-                            Home
+                            <img src={Img} width="170" height="50" />
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
@@ -39,6 +41,7 @@ function Home() {
                                     <Card.Text>
                                         Pão frances com uma qualidade incrivel
                                     </Card.Text>
+                                    <Button variant="dark">Comprar</Button>
                                 </Card.Body>
                             </Card>
                         </Link>
@@ -52,6 +55,7 @@ function Home() {
                                 <Card.Text>
                                     Pão frances com uma qualidade incrivel
                                 </Card.Text>
+                                <Button variant="dark">Comprar</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -64,6 +68,7 @@ function Home() {
                                 <Card.Text>
                                     Pão frances com uma qualidade incrivel
                                 </Card.Text>
+                                <Button variant="dark">Comprar</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -76,6 +81,7 @@ function Home() {
                                 <Card.Text>
                                     Pão frances com uma qualidade incrivel
                                 </Card.Text>
+                                <Button variant="dark">Comprar</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -90,6 +96,7 @@ function Home() {
                                 <Card.Text>
                                     Pão frances com uma qualidade incrivel
                                 </Card.Text>
+                                <Button variant="dark">Comprar</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -102,6 +109,7 @@ function Home() {
                                 <Card.Text>
                                     Pão frances com uma qualidade incrivel
                                 </Card.Text>
+                                <Button variant="dark">Comprar</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -114,6 +122,7 @@ function Home() {
                                 <Card.Text>
                                     Pão frances com uma qualidade incrivel
                                 </Card.Text>
+                                <Button variant="dark">Comprar</Button>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -126,6 +135,7 @@ function Home() {
                                 <Card.Text>
                                     Pão frances com uma qualidade incrivel
                                 </Card.Text>
+                                <Button variant="dark">Comprar</Button>
                             </Card.Body>
                         </Card>
                     </Col>

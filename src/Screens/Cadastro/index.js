@@ -1,6 +1,8 @@
 import React from "react";
 import { Container, Form, Navbar, Button, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import InputText from "../../Components/InputText";
+import Img from '../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
 
 function Cadastro() {
     return (
@@ -10,7 +12,7 @@ function Cadastro() {
                 <Container>
                     <Navbar.Brand>
                         <Link to="/" style={{ color: "#FFF", textDecoration: 'none' }}>
-                            Home
+                            <img src={Img} width="170" height="50" />
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />
@@ -138,9 +140,7 @@ function Cadastro() {
 
                 <Row className="d-flex justify-content-center">
                     <Col md={{ span: 1 }}>
-                        <Button variant="primary" type="submit">
-                            Submit
-                        </Button>
+                        <Button variant="dark">Submit</Button>
                     </Col>
                 </Row>
             </Container>
