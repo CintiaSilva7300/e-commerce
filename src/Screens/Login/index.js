@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Container, Form, Navbar } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 // import InputText from "../../Components/InputText";
-import Img from './Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
+import Img from '../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
 
 
 function Login() {
@@ -40,12 +40,12 @@ function Login() {
             </Navbar>
             {/* fim navbar */}
 
-            <div className="d-flex justify-content-center mt-5">
+            <div className="d-flex justify-content-center mt-3">
                 <Form>
-                    <h1 className="d-flex justify-content-center mt-2"> Entrar</h1>
-                    <Form.Group className="mb-3">
+                    <h1 className="d-flex justify-content-center mt-2 m-3"> Faça seu Login</h1>
+                    <Form.Group className="mb-3 ">
                         <Form.Label>E-mail </Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Control type="e-mail" placeholder="email" />
                         <Form.Text className="text-muted">
                             Nunca compartilharemos seu e-mail com mais ninguém.
                         </Form.Text>
@@ -57,7 +57,7 @@ function Login() {
                     </Form.Group>
                     <Button onClick={() => {
                         login();
-                    }} variant="dark">Submit</Button>
+                    }} variant="dark">Entrar</Button>
 
                     <div>
                         <Link to="/cadastro">
