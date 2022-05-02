@@ -1,9 +1,16 @@
 import React from "react";
 import { Container, Form, Navbar, Button, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Img from '../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
 
+
 function Cadastro() {
+
+    const navigate = useNavigate()
+    function telaHome() {
+        navigate('/')
+    }
+
     return (
         <div>
             {/* inicio nav bar */}
@@ -43,7 +50,7 @@ function Cadastro() {
                     <Col md={4}>
                         <Form.Group >
                             <Form.Label>Senha</Form.Label>
-                            <Form.Control type="password" placeholder="Password" />
+                            <Form.Control type="password" placeholder="Senha" />
                         </Form.Group>
                         <Form.Group>
                         </Form.Group>
@@ -138,7 +145,13 @@ function Cadastro() {
 
                     <Col className="mt-3" md={{ span: 4 }}>
                         <p></p>
-                        <Button style={{ width: "100%" }} variant="dark">Submit</Button>
+                        <Button onClick={() => {
+                            telaHome();
+                        }}
+                            style={{ width: "100%" }}
+                            variant="dark">
+                            Submit
+                        </Button>
                     </Col>
                 </Row>
 

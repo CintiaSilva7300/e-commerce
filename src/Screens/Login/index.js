@@ -64,7 +64,6 @@ function Login() {
                             <Form.Text className=" text-muted">
                                 Não é cadastrado?
                             </Form.Text>
-
                         </Link>
                     </div>
 
