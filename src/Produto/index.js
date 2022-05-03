@@ -2,6 +2,7 @@ import React from "react";
 import { Card, Col, Container, Nav, Navbar, NavDropdown, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Img from "../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg"
+import NavbarConteiner from "../Components/NavbarConteiner";
 
 
 
@@ -9,25 +10,7 @@ import Img from "../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg"
 function Home() {
     return (
         <div>
-            {/* inicio navbar */}
-            <Navbar bg="dark" fixed="top">
-                <Container>
-                    <Navbar.Brand>
-                        <Link to="/" style={{ color: "#FFF", textDecoration: 'none' }}>
-                            <img src={Img} width="170" height="50" />
-                        </Link>
-                    </Navbar.Brand>
-                    <Navbar.Toggle />
-                    <Navbar.Collapse className="justify-content-end">
-                        <Navbar.Text>
-                            <Link to="/login" style={{ color: "#FFF", textDecoration: 'none' }}>
-                                Login / cadastrar
-                            </Link>
-                        </Navbar.Text>
-                    </Navbar.Collapse>
-                </Container>
-            </Navbar>
-            {/* fim navbar */}
+            <NavbarConteiner />
 
             <Container style={{ marginTop: 100 }}>
                 <Row>
