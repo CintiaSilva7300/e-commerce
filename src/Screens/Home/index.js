@@ -1,8 +1,8 @@
 import React from "react";
-import { Card, Col, Container, Nav, Navbar, NavDropdown, Row, Button } from "react-bootstrap";
+import { Card, Col, Container, Navbar, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Img from '../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
-import InputText from "../../Components/InputText";
+// import InputText from "../../Components/InputText";
 
 
 
@@ -16,6 +16,7 @@ function Home() {
                         <Link to="/" style={{ color: "#FFF", textDecoration: 'none' }}>
                             <img src={Img} width="170" height="50" />
                         </Link>
+
                     </Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
@@ -61,9 +62,7 @@ function Home() {
                                 <Card.Text>
                                     Resolução máxima de vídeo: 1920px x 1080px
                                 </Card.Text>
-                                <Link to="/produto">
-                                    <Button variant="dark">Comprar</Button>
-                                </Link>
+                                <Link to="/produto"> <Button variant="dark">Comprar</Button></Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -160,9 +159,6 @@ function Home() {
                         </Card>
                     </Col>
                 </Row>
-
-
-
             </Container>
 
         </div >

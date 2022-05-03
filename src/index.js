@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css"; // CSS do bootstrap
 
 import Login from "./Screens/Login/index";
 import Home from "./Screens/Home/index";
-import Cadastro from "./Screens/Cadastro/index";
+import Cadastro from "../src/Screens/UserRegistration";
 import Produto from "./Produto/index"
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";

@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Container, Form, Navbar, Button, Row, Col } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import Img from '../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
@@ -6,10 +7,61 @@ import Img from '../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg
 
 function Cadastro() {
 
-    const navigate = useNavigate()
-    function telaHome() {
-        navigate('/')
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    const [nome, setNome] = useState("");
+    const [cpf, setCpf] = useState("");
+    const [telefone, setTelefone] = useState("");
+    const [dataNascimento, setDataNascimento] = useState("");
+    const [cidade, setCidade] = useState("");
+    const [logradouro, setLogradouro] = useState("");
+    const [cep, setCep] = useState("");
+    const [numeroCasa, setNumeroCasa] = useState("");
+    const [estado, setEstado] = useState("");
+
+    const navigate = useNavigate();
+
+    function cadastro() {
+        const userRegistration = {
+            email: email,
+            senha: senha,
+            nome: nome,
+            cpf: cpf,
+            telefone: telefone,
+            dataNascimento: dataNascimento,
+            cidade: cidade,
+            logradouro: logradouro,
+            numeroCasa: numeroCasa,
+            estado: estado
+        }
+        console.log(userRegistration);
+
+
+        axios
+            .post("######", userRegistration)
+            .then(() => {
+                navigate("/");
+            });
     }
+
+    function login() {
+        navigate("/login")
+    }
+
+    useEffect(() => {
+        console.log(cep.length);
+        if (cep.length === 8) {
+            axios
+                .get("https://viacep.com.br/ws/" + cep + "/json/")
+                .then((response) => {
+                    console.log(response);
+                    setCidade(response.data.cidade);
+                    setLogradouro(response.data.logradouro);
+                    setCep(response.data.cep);
+                    setEstado(response.data.estado);
+                });
+        }
+    }, [cep]);
 
     return (
         <div>
@@ -42,17 +94,15 @@ function Cadastro() {
                 <Row className="d-flex justify-content-center ">
                     <Col md={4}>
                         <Form.Group controlId="formBasicEmail">
-                            <Form.Label>E-mail</Form.Label>
-                            <Form.Control type="email" placeholder="e-mail" />
+                            <Form.Label> E-mail</Form.Label>
+                            <Form.Control type="email" AtualizarValor={setEmail} placeholder="e-mail" />
                         </Form.Group>
                     </Col>
 
                     <Col md={4}>
                         <Form.Group >
-                            <Form.Label>Senha</Form.Label>
-                            <Form.Control type="password" placeholder="Senha" />
-                        </Form.Group>
-                        <Form.Group>
+                            <Form.Label> Senha</Form.Label>
+                            <Form.Control type="password" AtualizarValor={setSenha} placeholder="Senha" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -61,16 +111,14 @@ function Cadastro() {
                     <Col md={4}>
                         <Form.Group >
                             <Form.Label>Nome</Form.Label>
-                            <Form.Control type="text" placeholder="nome" />
+                            <Form.Control type="text" AtualizarValor={setNome} placeholder="nome" />
                         </Form.Group>
                     </Col>
 
                     <Col md={4}>
                         <Form.Group >
                             <Form.Label>CPF</Form.Label>
-                            <Form.Control type="text" placeholder="cpf" />
-                        </Form.Group>
-                        <Form.Group >
+                            <Form.Control type="text" AtualizarValor={setCpf} placeholder="cpf" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -79,40 +127,31 @@ function Cadastro() {
                     <Col md={4}>
                         <Form.Group >
                             <Form.Label>Telefone</Form.Label>
-                            <Form.Control type="text" placeholder="telefone" />
+                            <Form.Control type="text" AtualizarValor={setTelefone} placeholder="telefone" />
                         </Form.Group>
                     </Col>
 
                     <Col md={4}>
                         <Form.Group >
                             <Form.Label>Data de Nacimento</Form.Label>
-                            <Form.Control type="date" placeholder="Data de Nacimento" />
-                        </Form.Group>
-                        <Form.Group >
+                            <Form.Control type="date" AtualizarValor={setDataNascimento} placeholder="Data de Nacimento" />
                         </Form.Group>
                     </Col>
                 </Row>
 
-                {/* <Row className="d-flex justify-content-center">
-                    <Col md={{ span: 4, offset: 2 }}>
-                        <Form.Label style={{ fontWeight: "bold", fontSize: 25 }}>Dados de Endereço</Form.Label>
-                    </Col>
-                </Row> */}
                 {/* -------------------------Endereço------------------------------- */}
                 <Row className="d-flex justify-content-center">
                     <Col md={4} style={{ paddingTop: 10, marginTop: 5 }}>
                         <Form.Group >
                             <Form.Label>Cidade</Form.Label>
-                            <Form.Control type="text" placeholder="cidade" />
+                            <Form.Control type="text" AtualizarValor={setCidade} placeholder="cidade" />
                         </Form.Group>
                     </Col>
 
                     <Col md={4} style={{ paddingTop: 10, marginTop: 5 }}>
                         <Form.Group >
                             <Form.Label>Logradouro</Form.Label>
-                            <Form.Control type="text" placeholder="logradouro" />
-                        </Form.Group>
-                        <Form.Group >
+                            <Form.Control type="text" AtualizarValor={setLogradouro} placeholder="logradouro" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -121,16 +160,14 @@ function Cadastro() {
                     <Col md={4}>
                         <Form.Group >
                             <Form.Label>Cep</Form.Label>
-                            <Form.Control type="text" placeholder="cep" />
+                            <Form.Control type="text" AtualizarValor={setCep} placeholder="cep" />
                         </Form.Group>
                     </Col>
 
                     <Col md={4}>
                         <Form.Group >
                             <Form.Label>Numero da casa</Form.Label>
-                            <Form.Control type="text" placeholder="numero da casa" />
-                        </Form.Group>
-                        <Form.Group >
+                            <Form.Control type="text" AtualizarValor={setNumeroCasa} placeholder="numero da casa" />
                         </Form.Group>
                     </Col>
                 </Row>
@@ -139,25 +176,15 @@ function Cadastro() {
                     <Col md={{ span: 4, offset: 2 }}>
                         <Form.Group >
                             <Form.Label>Estado</Form.Label>
-                            <Form.Control type="text" placeholder="estado" />
+                            <Form.Control type="text" AtualizarValor={setEstado} placeholder="estado" />
                         </Form.Group>
                     </Col>
 
                     <Col className="mt-3" md={{ span: 4 }}>
                         <p></p>
-                        <Button onClick={() => {
-                            telaHome();
-                        }}
-                            style={{ width: "100%" }}
-                            variant="dark">
-                            Submit
-                        </Button>
+                        <Button onClick={() => { login(); }} variant="dark">Cadastrar-se </Button>
                     </Col>
                 </Row>
-
-
-
-
             </Container>
         </div>
     )

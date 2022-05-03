@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Navbar } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-// import InputText from "../../Components/InputText";
 import Img from '../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
 
 
 function Login() {
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
-
     const navigate = useNavigate();
-
 
     function login() {
         // logica para logar
@@ -66,8 +63,6 @@ function Login() {
                             </Form.Text>
                         </Link>
                     </div>
-
-
 
                 </Form>
             </div>
