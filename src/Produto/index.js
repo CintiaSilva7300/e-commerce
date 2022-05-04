@@ -12,13 +12,10 @@ function Home() {
         <div>
             <NavbarConteiner />
 
-            <Container style={{ marginTop: 100 }}>
-                <Row>
-                    <h5 style={{ margin: "20" }}>
-                        Seu produto está pronto para compra
-                    </h5>
+            <Container style={{ marginTop: 60 }}>
+                <Row md={3}>
                     <Col style={{ textDecoration: "none", color: "#000" }}>
-                        <Card style={{ width: '25rem' }}>
+                        <Card style={{ width: '20rem' }}>
                             <Card.Img variant="top"
                                 src="https://http2.mlstatic.com/D_NQ_NP_804287-MLA49587128302_042022-F.webp" />
                             <Card.Body>
@@ -29,10 +26,61 @@ function Home() {
                                     É útil para salvar programas e documentos
                                     com a sua capacidade de 240 GB.
                                 </Card.Text>
+                            </Card.Body>
+                        </Card>
+                    </Col>
 
+                    <Col md={8}>
+                        <Card style={{ height: '100%', width: '100%' }}>
+                            <Card.Body>
+                                {/* <Card.Title>Pão</Card.Title>
+                                <Card.Text>
+                                    Pão frances com uma qualidade incrivel
+                                </Card.Text>
                                 <Link to="/produto">
                                     <Button variant="dark">Comprar</Button>
+                                </Link> */}
+                                <Card style={{ height: '100%', width: '100%' }}><p style={{ margin: 10 }}
+                                >
+                                    Conteudo ConteudoConteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo  Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo
+                                    Conteudo ConteudoConteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo
+                                    Conteudo ConteudoConteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo
+                                </p>
+
+                                </Card>
+                                <Link to="/produto">
+                                    <Button variant="dark">Garantir agora</Button>
                                 </Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    {/* <Col md={4}>
+                        <Card style={{ height: '100%', width: '100%' }}>
+                            <Card.Body>
+                                <Card style={{ height: '100%', width: '100%' }}><p style={{ margin: 10 }}
+                                >
+                                    Conteudo ConteudoConteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo  Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo
+                                    Conteudo ConteudoConteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo
+                                    Conteudo ConteudoConteudo Conteudo Conteudo Conteudo Conteudo Conteudo Conteudo
+                                </p></Card>
+
+                                <Link to="/produto">
+                                    <Button variant="dark">Garanta o seu agora!</Button>
+                                </Link>
+                            </Card.Body>
+                        </Card>
+                    </Col> */}
+
+                    <Col md={12}>
+                        <Card style={{ marginTop: 20 }}>
+                            <Card.Body>
+                                <p>alguma coisa aqui
+                                    alguma coisa aqui
+                                    alguma coisa aqui
+                                    alguma coisa aqui
+                                    alguma coisa aqui
+                                    alguma coisa aqui
+                                </p>
                             </Card.Body>
                         </Card>
                     </Col>
