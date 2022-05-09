@@ -1,11 +1,7 @@
 import React from "react";
 import { Card, Col, Container, Navbar, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Img from '../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
 import NavbarConteiner from "../../Components/NavbarConteiner";
-// import InputText from "../../Components/InputText";
-
-
 
 function Home() {
     return (
@@ -142,7 +138,6 @@ function Home() {
                     </Col>
                 </Row>
             </Container>
-
         </div >
     )
 }
