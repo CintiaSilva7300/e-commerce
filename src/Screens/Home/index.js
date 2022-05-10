@@ -25,7 +25,7 @@ function Home() {
                                 </Card.Text>
 
                                 <Link to="/produto">
-                                    <Button variant="dark">Comprar</Button>
+                                    <Button variant="outline-dark">Comprar</Button>
                                 </Link>
                             </Card.Body>
                         </Card>
@@ -41,7 +41,7 @@ function Home() {
                                 <Card.Text>
                                     Resolução máxima de vídeo: 1920px x 1080px
                                 </Card.Text>
-                                <Link to="/produto"> <Button variant="dark">Comprar</Button></Link>
+                                <Link to="/produto"><Button variant="outline-dark">Comprar</Button></Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -55,7 +55,7 @@ function Home() {
                                     Pão frances com uma qualidade incrivel
                                 </Card.Text>
                                 <Link to="/produto">
-                                    <Button variant="dark">Comprar</Button>
+                                    <Button variant="outline-dark">Comprar</Button>
                                 </Link>
                             </Card.Body>
                         </Card>
@@ -70,7 +70,7 @@ function Home() {
                                     Pão frances com uma qualidade incrivel
                                 </Card.Text>
                                 <Link to="/produto">
-                                    <Button variant="dark">Comprar</Button>
+                                    <Button variant="outline-dark">Comprar</Button>
                                 </Link>
                             </Card.Body>
                         </Card>
@@ -90,7 +90,42 @@ function Home() {
                                 </Card.Text>
 
                                 <Link to="/produto">
-                                    <Button variant="dark">Comprar</Button>
+                                    <Button variant="outline-dark">Comprar</Button>
+                                </Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    <Col>
+                        <Card style={{ width: '15rem', marginTop: 10 }}>
+                            <Card.Img variant="top" src="https://http2.mlstatic.com/D_NQ_NP_821975-MLA49423623994_032022-O.webp" />
+                            <Card.Body>
+                                <Card.Title>
+                                    Câmera web Logitech C920e Full HD 30FPS
+                                </Card.Title>
+                                <Card.Text>
+                                    Resolução máxima de vídeo: 1920px x 1080px
+                                </Card.Text>
+                                <Link to="/produto"> <Button variant="outline-dark">Comprar</Button></Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    <Col style={{ textDecoration: "none", color: "#000" }}>
+                        <Card style={{ width: '15rem', marginTop: 10 }}>
+                            <Card.Img variant="top"
+                                src="https://http2.mlstatic.com/D_NQ_NP_804287-MLA49587128302_042022-F.webp" />
+                            <Card.Body>
+                                <Card.Title>
+                                    Disco sólido interno Kingston  preto</Card.Title>
+                                <Card.Text>
+                                    Com tecnologia 3D NAND.
+                                    É útil para salvar programas e documentos
+                                    com a sua capacidade de 240 GB.
+                                </Card.Text>
+
+                                <Link to="/produto">
+                                    <Button variant="outline-dark">Comprar</Button>
                                 </Link>
                             </Card.Body>
                         </Card>
@@ -125,7 +160,7 @@ function Home() {
                                 </Card.Text>
 
                                 <Link to="/produto">
-                                    <Button variant="dark">Comprar</Button>
+                                    <Button variant="outline-dark">Comprar</Button>
                                 </Link>
                             </Card.Body>
                         </Card>
@@ -141,27 +176,7 @@ function Home() {
                                 <Card.Text>
                                     Resolução máxima de vídeo: 1920px x 1080px
                                 </Card.Text>
-                                <Link to="/produto"> <Button variant="dark">Comprar</Button></Link>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                    <Col style={{ textDecoration: "none", color: "#000" }}>
-                        <Card style={{ width: '15rem', marginTop: 10 }}>
-                            <Card.Img variant="top"
-                                src="https://http2.mlstatic.com/D_NQ_NP_804287-MLA49587128302_042022-F.webp" />
-                            <Card.Body>
-                                <Card.Title>
-                                    Disco sólido interno Kingston  preto</Card.Title>
-                                <Card.Text>
-                                    Com tecnologia 3D NAND.
-                                    É útil para salvar programas e documentos
-                                    com a sua capacidade de 240 GB.
-                                </Card.Text>
-
-                                <Link to="/produto">
-                                    <Button variant="dark">Comprar</Button>
-                                </Link>
+                                <Link to="/produto"> <Button variant="outline-dark">Comprar</Button></Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -176,22 +191,7 @@ function Home() {
                                 <Card.Text>
                                     Resolução máxima de vídeo: 1920px x 1080px
                                 </Card.Text>
-                                <Link to="/produto"> <Button variant="dark">Comprar</Button></Link>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-
-                    <Col>
-                        <Card style={{ width: '15rem', marginTop: 10 }}>
-                            <Card.Img variant="top" src="https://http2.mlstatic.com/D_NQ_NP_821975-MLA49423623994_032022-O.webp" />
-                            <Card.Body>
-                                <Card.Title>
-                                    Câmera web Logitech C920e Full HD 30FPS
-                                </Card.Title>
-                                <Card.Text>
-                                    Resolução máxima de vídeo: 1920px x 1080px
-                                </Card.Text>
-                                <Link to="/produto"> <Button variant="dark">Comprar</Button></Link>
+                                <Link to="/produto"> <Button variant="outline-dark">Comprar</Button></Link>
                             </Card.Body>
                         </Card>
                     </Col>
@@ -205,7 +205,7 @@ function Home() {
                                 <Card.Text>
                                     Resolução máxima de vídeo: 1920px x 1080px
                                 </Card.Text>
-                                <Link to="/produto"> <Button variant="dark">Comprar</Button></Link>
+                                <Link to="/produto"> <Button variant="outline-dark">Comprar</Button></Link>
                             </Card.Body>
                         </Card>
                     </Col>

@@ -182,7 +182,7 @@ function Cadastro() {
 
                     <Col className="mt-3" md={{ span: 4 }}>
                         <p></p>
-                        <Button onClick={() => { login(); }} variant="dark">Cadastrar-se </Button>
+                        <Button onClick={() => { login(); }} variant="outline-dark">Cadastrar-se </Button>
                     </Col>
                 </Row>
             </Container>

@@ -35,7 +35,7 @@ function Home() {
                                     {produto.especificao && produto.especificao.map((especificacao) => (<p>{especificacao}</p>))}
                                 </Card>
                                 <Link to="/produto">
-                                    <Button variant="dark">Garantir agora</Button>
+                                    <Button variant="outline-dark">Garantir agora</Button>
                                 </Link>
                             </Card.Body>
                         </Card>

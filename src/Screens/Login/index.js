@@ -24,7 +24,7 @@ function Login() {
 
                     <Button onClick={() => {
                         login();
-                    }} variant="dark">Entrar</Button>
+                    }} variant="outline-dark">Entrar</Button>
 
                     <div>
                         <Link to="/cadastro">
