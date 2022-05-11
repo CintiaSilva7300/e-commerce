@@ -44,7 +44,7 @@ function AdminHome(props) {
                                         placeholder="Especifique as Alterações realizada no produto"
                                         aria-label="Recipient's username with two button addons"
                                     />
-                                    <Button variant="outline-dark">Editar</Button>
+                                    <Button variant="outline-dark" >Editar</Button>
                                     <Button variant="outline-dark">Apagar</Button>
                                 </InputGroup>
 
@@ -53,7 +53,7 @@ function AdminHome(props) {
                                         placeholder="Especifique as Alterações realizada no produto"
                                         aria-label="Recipient's username with two button addons"
                                     />
-                                    <Button variant="outline-dark">Editar</Button>
+                                    <Button variant="outline-dark" >Editar</Button>
                                     <Button variant="outline-dark">Apagar</Button>
                                 </InputGroup>
 
@@ -62,7 +62,7 @@ function AdminHome(props) {
                                         placeholder="Especifique as Alterações realizada no produto"
                                         aria-label="Recipient's username with two button addons"
                                     />
-                                    <Button variant="outline-dark">Editar</Button>
+                                    <Button variant="outline-dark" >Editar</Button>
                                     <Button variant="outline-dark">Apagar</Button>
                                 </InputGroup>
 
@@ -71,7 +71,7 @@ function AdminHome(props) {
                                         placeholder="Especifique as Alterações realizada no produto"
                                         aria-label="Recipient's username with two button addons"
                                     />
-                                    <Button variant="outline-dark">Editar</Button>
+                                    <Button variant="outline-dark" >Editar</Button>
                                     <Button variant="outline-dark">Apagar</Button>
                                 </InputGroup>
 

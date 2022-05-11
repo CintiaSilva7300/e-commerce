@@ -9,7 +9,7 @@ function Login() {
     const navigate = useNavigate();
 
     function login() {
-        navigate('/');
+        navigate('/admin/home');
     }
     return (
         <>
