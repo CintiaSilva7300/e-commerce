@@ -77,7 +77,7 @@ function Cadastro() {
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
                             <Link to="/login" style={{ color: "#FFF", textDecoration: 'none' }}>
-                                Login / cadastrar
+                                Login
                             </Link>
                         </Navbar.Text>
                     </Navbar.Collapse>

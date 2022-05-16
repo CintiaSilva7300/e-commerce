@@ -22,9 +22,10 @@ ReactDOM.render(
       <Route>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/teste" element={<ComponentExample />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/produto" element={<Produto />} />
+
+        <Route path="/teste" element={<ComponentExample />} />
 
         {/* Admin */}
         <Route path="/admin/login" element={<LoginAdmin />} />

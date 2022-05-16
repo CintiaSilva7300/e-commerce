@@ -1,33 +1,73 @@
 export const produtosMock = [
   {
-    nome: "React",
-    descricao: "Framework javascript incrivel",
-    img: "https://www.pngfind.com/pngs/m/685-6854970_react-logo-png-png-download-logo-png-reactjs.png",
+    id: 1,
+    nome: "Titulo",
+    descricao: " Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição",
+    img: "https://portalwebdesigner.com/wp-content/uploads/2016/05/Simbolo-Linguagem-JavaScript.png",
+    quantidadeDisponivel: "Ainda restam 10 unidades",
+  },
+
+  {
+    id: 1,
+    nome: "Titulo",
+    descricao: " Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição",
+    img: "https://portalwebdesigner.com/wp-content/uploads/2016/05/Simbolo-Linguagem-JavaScript.png",
+    quantidadeDisponivel: "Ainda restam 10 unidades",
   },
   {
-    nome: "Js",
-    descricao: "Framework javascript incrivel",
-    img: "https://www.pngfind.com/pngs/m/685-6854970_react-logo-png-png-download-logo-png-reactjs.png",
+    id: 1,
+    nome: "Titulo",
+    descricao: " Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição",
+    img: "https://portalwebdesigner.com/wp-content/uploads/2016/05/Simbolo-Linguagem-JavaScript.png",
+    quantidadeDisponivel: "Ainda restam 10 unidades",
   },
+
   {
-    nome: "Java",
-    descricao: "Framework javascript incrivel",
-    img: "https://www.pngfind.com/pngs/m/685-6854970_react-logo-png-png-download-logo-png-reactjs.png",
+    id: 1,
+    nome: "Titulo",
+    descricao: " Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição",
+    img: "https://portalwebdesigner.com/wp-content/uploads/2016/05/Simbolo-Linguagem-JavaScript.png",
+    quantidadeDisponivel: "Ainda restam 10 unidades",
   },
+
   {
-    nome: "Bootstrap",
-    descricao: "Framework javascript incrivel",
-    img: "https://www.pngfind.com/pngs/m/685-6854970_react-logo-png-png-download-logo-png-reactjs.png",
+    id: 1,
+    nome: "Titulo",
+    descricao: " Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição",
+    img: "https://portalwebdesigner.com/wp-content/uploads/2016/05/Simbolo-Linguagem-JavaScript.png",
+    quantidadeDisponivel: "Ainda restam 10 unidades",
   },
+
   {
-    nome: "Bootstrap",
-    descricao: "Framework javascript incrivel",
-    img: "https://www.pngfind.com/pngs/m/685-6854970_react-logo-png-png-download-logo-png-reactjs.png",
+    id: 1,
+    nome: "Titulo",
+    descricao: " Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição",
+    img: "https://portalwebdesigner.com/wp-content/uploads/2016/05/Simbolo-Linguagem-JavaScript.png",
+    quantidadeDisponivel: "Ainda restam 10 unidades",
   },
+
   {
-    nome: "Bootstrap",
-    descricao: "Framework javascript incrivel",
-    img: "https://www.pngfind.com/pngs/m/685-6854970_react-logo-png-png-download-logo-png-reactjs.png",
+    id: 1,
+    nome: "Titulo",
+    descricao: " Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição",
+    img: "https://portalwebdesigner.com/wp-content/uploads/2016/05/Simbolo-Linguagem-JavaScript.png",
+    quantidadeDisponivel: "Ainda restam 10 unidades",
+  },
+
+  {
+    id: 1,
+    nome: "Titulo",
+    descricao: " Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição",
+    img: "https://portalwebdesigner.com/wp-content/uploads/2016/05/Simbolo-Linguagem-JavaScript.png",
+    quantidadeDisponivel: "Ainda restam 10 unidades",
+  },
+
+  {
+    id: 1,
+    nome: "Titulo",
+    descricao: " Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição Descrição",
+    img: "https://portalwebdesigner.com/wp-content/uploads/2016/05/Simbolo-Linguagem-JavaScript.png",
+    quantidadeDisponivel: "Ainda restam 10 unidades",
   },
 ];
 

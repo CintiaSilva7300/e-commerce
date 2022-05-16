@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import NavbarConteiner from "../../Components/NavbarConteiner";
-import { productMock } from "../../utils/mock"
+import { productMock } from "../../utils/mock";
 
 function Home() {
     const [produto, setProduto] = useState({})
@@ -21,6 +21,7 @@ function Home() {
                                 src={produto.img} />
                             <Card.Body>
                                 <Card.Title>{produto.nome}</Card.Title>
+
                                 <Card.Text>
                                     {produto.descricao}
                                 </Card.Text>

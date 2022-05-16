@@ -4,7 +4,7 @@ import { Form } from "react-bootstrap";
 function FomularioLogin(props) {
     return (
         <div>
-            <Form>
+            <Form style={{ marginTop: 30 }}>
                 <Form.Group className="mb-3 ">
                     <Form.Label>E-mail </Form.Label>
                     <Form.Control type="e-mail" placeholder="email" />
