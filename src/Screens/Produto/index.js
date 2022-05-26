@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Row, Button, Badge, InputGroup, Form } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import NavbarConteiner from "../../Components/NavbarConteiner";
 import { produtosMock } from "../../utils/mock";
 
 function Produto() {
+
+    const navigate = useNavigate();
+
+    function ComfirmarCompra() {
+        navigate('/');
+    }
+
     const [produtos, setProdutos] = useState([])
     const [produto, setProduto] = useState({})
 
@@ -27,6 +34,7 @@ function Produto() {
     if (!produto.id) {
         return <p>carregando</p>
     }
+
 
     return (
         <div>
@@ -108,6 +116,11 @@ function Produto() {
                                         </Form.Group>
                                     </Col>
                                 </Row>
+
+                                <Button style={{ width: "50%", marginLeft: 200, marginTop: 10 }} onClick={() => {
+                                    ComfirmarCompra();
+                                }} variant="outline-dark">Confirmar Compra</Button>
+
                             </Form>
                         </Col>
                     </Col>

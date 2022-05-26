@@ -13,7 +13,7 @@ function FomularioLogin(props) {
 
                 <Form.Group className="mb-3">
                     <Form.Label>Senha</Form.Label>
-                    <Form.Control type="senha" />
+                    <Form.Control type="password" />
                 </Form.Group>
             </Form>
         </div>
