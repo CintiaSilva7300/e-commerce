@@ -1,23 +1,42 @@
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Row, Button } from "react-bootstrap";
+import { Card, Col, Container, Row, Button, Badge, InputGroup, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import NavbarConteiner from "../../Components/NavbarConteiner";
-import { productMock } from "../../utils/mock";
+import { produtosMock } from "../../utils/mock";
 
-function Home() {
+function Produto() {
+    const [produtos, setProdutos] = useState([])
     const [produto, setProduto] = useState({})
+
     useEffect(() => {
-        setProduto(productMock)
+        setProdutos(produtosMock)
     }, [])
+
+    useEffect(() => {
+        if (produtos.length > 0) {
+            const url = new URLSearchParams(window.location.search);
+
+            const id = url.get('id');
+
+            const p = produtos.find((item) => item.id == id);
+
+            setProduto(p);
+        }
+    }, [produtos])
+
+    if (!produto.id) {
+        return <p>carregando</p>
+    }
 
     return (
         <div>
             <NavbarConteiner />
-            <Container style={{ marginTop: 60 }}>
-                <Row md={3}>
-                    <Col style={{ textDecoration: "none", color: "#000" }}>
-                        <Card style={{ width: '20rem' }}>
-                            <Card.Img variant="top"
+            <Container style={{ marginTop: 30, fontSize: 15, fontFamily: 'serif' }}>
+                <Row >
+                    <Col xs={12} md={4} style={{ textDecoration: 'none', color: "#000" }}>
+                        <Card style={{ width: '20rem', backgroundColor: '#fffdd0', borderRadius: 5, padding: 25 }}>
+                            <Card.Img
+                                variant="top"
                                 src={produto.img} />
                             <Card.Body>
                                 <Card.Title>{produto.nome}</Card.Title>
@@ -29,31 +48,68 @@ function Home() {
                         </Card>
                     </Col>
 
-                    <Col md={8}>
-                        <Card style={{ height: '100%', width: '100%' }}>
-                            <Card.Body>
-                                <Card style={{ height: '100%', width: '100%' }}>
-                                    {produto.especificao && produto.especificao.map((especificacao) => (<p>{especificacao}</p>))}
-                                </Card>
-                                <Link to="/produto">
-                                    <Button variant="outline-dark">Garantir agora</Button>
-                                </Link>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                    <Col>
+                        <Badge pill bg="dark" style={{ padding: 10, marginLeft: 90 }}>
+                            <h1>
+                                {produto.nome} {produto.preco}
+                            </h1>
+                        </Badge>
 
-                    <Col md={12}>
-                        <Card style={{ marginTop: 20 }}>
-                            <Card.Body>
-                                <p>alguma coisa aqui
-                                    alguma coisa aqui
-                                    alguma coisa aqui
-                                    alguma coisa aqui
-                                    alguma coisa aqui
-                                    alguma coisa aqui
-                                </p>
-                            </Card.Body>
-                        </Card>
+                        <Col>
+                            <Form>
+                                <Row style={{ backgroundColor: '#fffdd0', marginTop: 20, borderRadius: 10, padding: 25 }}>
+                                    <Col xs={12} md={8}>
+                                        <Form.Group controlId="formBasictext">
+                                            <Form.Label>Nome completo </Form.Label>
+                                            <Form.Control type="text" placeholder="Nome" />
+                                        </Form.Group>
+                                    </Col>
+
+                                    <Col xs={6} md={4}>
+                                        <Form.Group controlId="formBasictext">
+                                            <Form.Label>Cidade </Form.Label>
+                                            <Form.Control type="text" placeholder="Nome" />
+                                        </Form.Group>
+                                    </Col>
+
+                                    <Row>
+                                        <Col style={{ marginTop: 10 }}>
+                                            <Form.Group className="mb-3" controlId="formBasictext">
+                                                <h1 style={{ fontSize: 16, fontFamily: 'arial', marginTop: 5 }}><strong>Dados de Pagamento</strong></h1>
+                                            </Form.Group>
+                                        </Col>
+                                    </Row>
+
+                                    <Col xs={12} md={7}>
+                                        <Form.Group controlId="formBasictext">
+                                            <Form.Label>Numero do Cartão </Form.Label>
+                                            <Form.Control type="text" placeholder="numero do Cartão" />
+                                        </Form.Group>
+                                    </Col>
+
+                                    <Col xs={6} md={5}>
+                                        <Form.Group >
+                                            <Form.Label>Validade do Cartão</Form.Label>
+                                            <Form.Control type="date" placeholder="Data de Nacimento" />
+                                        </Form.Group>
+                                    </Col>
+
+                                    <Col xs={12} md={8}>
+                                        <Form.Group controlId="formBasictext">
+                                            <Form.Label>Nome Impresso no Cartão </Form.Label>
+                                            <Form.Control type="text" placeholder="nome impresso no cartão" />
+                                        </Form.Group>
+                                    </Col>
+
+                                    <Col xs={6} md={3}>
+                                        <Form.Group controlId="formBasicnumber">
+                                            <Form.Label>Codigo de Segurança </Form.Label>
+                                            <Form.Control type="text" placeholder="codigo de segurança" />
+                                        </Form.Group>
+                                    </Col>
+                                </Row>
+                            </Form>
+                        </Col>
                     </Col>
                 </Row>
             </Container>
@@ -61,4 +117,4 @@ function Home() {
     )
 }
 
-export default Home;
+export default Produto;
