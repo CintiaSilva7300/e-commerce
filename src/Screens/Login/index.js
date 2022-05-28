@@ -43,10 +43,6 @@ function Login() {
                                 Não é cadastrado?
                             </Form.Text>
                         </Link>
-
-                    </div>
-
-                    <div>
                     </div>
                 </Form>
             </div>

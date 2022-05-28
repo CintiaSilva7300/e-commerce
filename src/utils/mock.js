@@ -35,7 +35,7 @@ export const produtosMock = [
 
   {
     id: 5,
-    nome: "Jaqueta Feminina Casaco",
+    nome: "Jaqueta Feminina",
     descricao: "Jaqueta Feminina Casaco Fofinho Ted Curto Pelucia Quentinho",
     img: "https://http2.mlstatic.com/D_NQ_NP_689028-MLB50012556186_052022-O.webp",
     quantidadeDisponivel: "Ainda restam 10 unidades",
@@ -46,7 +46,7 @@ export const produtosMock = [
     id: 6,
     nome: "Sobretudo Feminino",
     descricao: "Sobretudo Feminino C/ Botões Casaco De Frio Grosso Premium",
-    img: "https://http2.mlstatic.com/D_NQ_NP_789204-MLB50028991632_052022-O.webp",
+    img: "https://cf.shopee.com.br/file/fcb141e10ad456d3094fab6e72279cb9_tn",
     quantidadeDisponivel: "Ainda restam 10 unidades",
     preco: "111,79 R$",
   },

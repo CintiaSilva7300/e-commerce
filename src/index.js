@@ -11,6 +11,7 @@ import Produto from "./Screens/Produto/index";
 //Adimin
 import AdminHome from "./Admin/Screens/HomeAdmin";
 import LoginAdmin from "./Admin/Screens/LoginAdmin";
+import Animacao from "./Components/Animacao";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ComponentExample from "./Screens/ComponentExample";
@@ -24,6 +25,7 @@ ReactDOM.render(
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/produto" element={<Produto />} />
+        <Route path="/animacaoo" element={<Animacao />} />
 
         <Route path="/teste" element={<ComponentExample />} />
 

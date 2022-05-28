@@ -8,9 +8,20 @@ import { produtosMock } from "../../utils/mock";
 
 function Home() {
     const [produtos, setProdutos] = React.useState([]);
+    const [loading, setLoading] = React.useState(true);
+
     React.useEffect(() => {
         setProdutos(produtosMock);
+
+        const timer = setTimeout(() => {
+            setLoading(false)
+        }, 1000)
+        return () => clearTimeout(timer);
     }, []);
+
+    if (loading) {
+        return <p>Carr</p>
+    }
 
     return (
         <div>
@@ -21,7 +32,7 @@ function Home() {
                 <Row>
                     {produtos.map((ph) => {
                         return (
-                            <Col style={{ textDecoration: "none", color: "#000" }}>
+                            <Col md={3} style={{ textDecoration: "none", color: "#000" }}>
                                 <Card className="text-center" style={{ width: '15rem', height: 360, marginTop: 10 }}>
 
                                     <Card.Img variant="top" src={ph.img} /><Card.Body>

@@ -3,12 +3,14 @@ import { Card, Col, Container, Row, Button, Badge, InputGroup, Form } from "reac
 import { Link, useNavigate } from "react-router-dom";
 import NavbarConteiner from "../../Components/NavbarConteiner";
 import { produtosMock } from "../../utils/mock";
+import Animacao1 from "../../Components/Animacao";
 
 function Produto() {
 
     const navigate = useNavigate();
 
     function ComfirmarCompra() {
+
         navigate('/');
     }
 
@@ -32,9 +34,10 @@ function Produto() {
     }, [produtos])
 
     if (!produto.id) {
-        return <p>carregando</p>
+        return (
+            <Animacao1 />
+        )
     }
-
 
     return (
         <div>
@@ -42,7 +45,7 @@ function Produto() {
             <Container style={{ marginTop: 30, fontSize: 15, fontFamily: 'serif' }}>
                 <Row >
                     <Col xs={12} md={4} style={{ textDecoration: 'none', color: "#000" }}>
-                        <Card style={{ width: '20rem', backgroundColor: '#fffdd0', borderRadius: 5, padding: 25 }}>
+                        <Card style={{ width: '20rem', borderRadius: 5, padding: 25 }}>
                             <Card.Img
                                 variant="top"
                                 src={produto.img} />
@@ -57,15 +60,17 @@ function Produto() {
                     </Col>
 
                     <Col>
-                        <Badge pill bg="dark" style={{ padding: 10, marginLeft: 90 }}>
+                        <Badge pill bg="dark" style={{ padding: 10, marginLeft: 90, fontFamily: 'cursive' }}>
                             <h1>
                                 {produto.nome} {produto.preco}
                             </h1>
+
                         </Badge>
+
 
                         <Col>
                             <Form>
-                                <Row style={{ backgroundColor: '#fffdd0', marginTop: 20, borderRadius: 10, padding: 25 }}>
+                                <Row style={{ marginTop: 20, borderRadius: 10, padding: 25 }}>
                                     <Col xs={12} md={8}>
                                         <Form.Group controlId="formBasictext">
                                             <Form.Label>Nome completo </Form.Label>
