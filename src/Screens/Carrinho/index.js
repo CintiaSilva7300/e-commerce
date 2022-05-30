@@ -83,8 +83,6 @@ function Carrinho() {
                                 <p>{pd.descricao}</p>
                             </Card>
                         ))}
-
-
                     </Col>
                 </Row>
             </Container >
