@@ -45,7 +45,7 @@ function Carrinho() {
                                         <td>
                                             <Figure>
                                                 <Figure.Image
-                                                    width={150}
+                                                    width={128}
                                                     height={150}
                                                     alt="171x180"
                                                     src={p.img}
@@ -62,21 +62,30 @@ function Carrinho() {
                     </Col>
 
                     <Col sm={4}>
-                        <table >
-                            <tbody>
-                                {produtos.map((pd) => (
-                                    <Card style={{ backgroundColor: '#212529', minHeight: 160, marginTop: 40, fontFamily: "serif", color: 'white', fontSize: 15 }}>
-                                        <h2 style={{ textAlign: 'center', marginTop: 2 }}>
-                                            {pd.nome}
-                                        </h2>
-                                        <p>{pd.descricao}</p>
-                                    </Card>
-                                ))}
-                            </tbody>
-                        </table>
+
+                        <h2 style={{
+                            textAlign: 'center'
+                        }}>Total</h2>
+
+                        {produtos.map((pd) => (
+                            <Card style={{
+                                borderRadius: 20,
+                                minHeight: 160,
+                                fontFamily: "serif",
+                                color: '#000',
+                                fontSize: 15
+                            }}>
+
+                                <h2 style={{ textAlign: 'center', marginTop: 2 }}>
+                                    {pd.nome}
+                                </h2>
+
+                                <p>{pd.descricao}</p>
+                            </Card>
+                        ))}
+
+
                     </Col>
-
-
                 </Row>
             </Container >
         </div >

@@ -27,8 +27,6 @@ function Home() {
         <div>
             <NavbarConteiner />
             <Container style={{ marginTop: 50 }}>
-                <h1 style={{ textAlign: 'center', margin: 40 }}>Otimos produtos </h1>
-
                 <Row>
                     {produtos.map((ph) => {
                         return (
