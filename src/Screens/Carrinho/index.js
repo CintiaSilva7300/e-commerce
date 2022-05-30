@@ -65,12 +65,13 @@ function Carrinho() {
 
                         <h2 style={{
                             textAlign: 'center'
-                        }}>Total</h2>
+                        }}>Total a Pagar</h2>
 
                         {produtos.map((pd) => (
                             <Card style={{
                                 borderRadius: 20,
                                 minHeight: 160,
+                                marginTop: 5,
                                 fontFamily: "serif",
                                 color: '#000',
                                 fontSize: 15
