@@ -26,7 +26,7 @@ function Produto() {
             return;
         }
 
-        localStorage.setItem("carrinho", id);
+        localStorage.setItem("carrinho", id );
         navigate("/carrinho");
     }
 

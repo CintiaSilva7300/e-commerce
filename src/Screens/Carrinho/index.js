@@ -6,8 +6,8 @@ import { produtosMock } from "../../utils/mock";
 
 function Carrinho() {
     const navigate = useNavigate();
-
     const [produtos, setProdutos] = useState([]);
+    const [total, setTotal] = useState(0);
 
     useEffect(() => {
         const carrinhoLocalStorage = localStorage.getItem("carrinho");
@@ -21,6 +21,12 @@ function Carrinho() {
             );
 
             setProdutos(produtosCarrinho);
+
+            let price = 0;
+            produtosCarrinho.map((p) => {
+                price = price + Number(p.preco)
+            })
+            setTotal(price)
         }
     }, []);
 
@@ -54,7 +60,7 @@ function Carrinho() {
                                         </td>
                                         <td>{p.nome}</td>
                                         <td>1</td>
-                                        <td>{p.preco}</td>
+                                        <td>{p.preco.toFixed(2)}</td>
                                     </tr>
                                 ))}
                             </tbody>
@@ -62,28 +68,9 @@ function Carrinho() {
                     </Col>
 
                     <Col sm={4}>
-
                         <h2 style={{
                             textAlign: 'center'
-                        }}>Total a Pagar</h2>
-
-                        {produtos.map((pd) => (
-                            <Card style={{
-                                borderRadius: 20,
-                                minHeight: 160,
-                                marginTop: 5,
-                                fontFamily: "serif",
-                                color: '#000',
-                                fontSize: 15
-                            }}>
-
-                                <h2 style={{ textAlign: 'center', marginTop: 2 }}>
-                                    {pd.nome}
-                                </h2>
-
-                                <p>{pd.descricao}</p>
-                            </Card>
-                        ))}
+                        }}>Total a Pagar: R$ {total.toFixed(2).toString().replace('.', ',')}</h2>
                     </Col>
                 </Row>
             </Container >

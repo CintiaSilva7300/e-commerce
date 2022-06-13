@@ -5,7 +5,7 @@ export const produtosMock = [
     descricao: " Casaco quentinho para o frio",
     img: "https://http2.mlstatic.com/D_Q_NP_848995-CBT44383299387_122020-AB.webp",
     quantidadeDisponivel: "Ainda restam 10 unidades",
-    preco: "199,99 R$",
+    preco: 199.99,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ export const produtosMock = [
     descricao: "Sueter bem fofinho e quentinho para o frio",
     img: "https://http2.mlstatic.com/D_Q_NP_849291-CBT49003774256_022022-AB.webp",
     quantidadeDisponivel: "Ainda restam 10 unidades",
-    preco: "155,20 R$",
+    preco: 155.20,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ export const produtosMock = [
     descricao: "Casaco Feminino Casaco De Lã Com Capuz Casaco De Aquecimento",
     img: "https://http2.mlstatic.com/D_NQ_NP_704897-CBT49467884175_032022-O.webp",
     quantidadeDisponivel: "Ainda restam 10 unidades",
-    preco: "128,19 R$",
+    preco: 128.19,
   },
 
   {
@@ -30,7 +30,7 @@ export const produtosMock = [
     descricao: " Casaco Feminino Com Capuz Casaco Casual Com Bolsos Soltos",
     img: "https://http2.mlstatic.com/D_NQ_NP_782101-CBT47520940581_092021-O.webp",
     quantidadeDisponivel: "Ainda restam 10 unidades",
-    preco: "146,99 R$",
+    preco: 146.99,
   },
 
   {
@@ -39,7 +39,7 @@ export const produtosMock = [
     descricao: "Jaqueta Feminina Casaco Fofinho Ted Curto Pelucia Quentinho",
     img: "https://http2.mlstatic.com/D_NQ_NP_689028-MLB50012556186_052022-O.webp",
     quantidadeDisponivel: "Ainda restam 10 unidades",
-    preco: "200,00 R$",
+    preco: 200.00,
   },
 
   {
@@ -48,7 +48,7 @@ export const produtosMock = [
     descricao: "Sobretudo Feminino C/ Botões Casaco De Frio Grosso Premium",
     img: "https://cf.shopee.com.br/file/fcb141e10ad456d3094fab6e72279cb9_tn",
     quantidadeDisponivel: "Ainda restam 10 unidades",
-    preco: "111,79 R$",
+    preco: 111.79,
   },
 
   {
@@ -57,7 +57,7 @@ export const produtosMock = [
     descricao: "Blusa Tricot Listrada C/ Decote V Manga C/ Botões",
     img: "https://http2.mlstatic.com/D_NQ_NP_828701-MLB49185658634_022022-O.webp",
     quantidadeDisponivel: "Ainda restam 10 unidades",
-    preco: "333,00 R$",
+    preco: 333.00,
   },
 
   {
@@ -66,7 +66,7 @@ export const produtosMock = [
     descricao: "Blusa Tricot Manga Longa Bufante",
     img: "https://http2.mlstatic.com/D_NQ_NP_635625-MLB46669836682_072021-O.webp",
     quantidadeDisponivel: "Ainda restam 10 unidades",
-    preco: "247,90 R$",
+    preco: 247.90,
   },
 
   {
@@ -75,7 +75,7 @@ export const produtosMock = [
     descricao: "Blusa Tricot Manga Longa Oversized",
     img: "https://http2.mlstatic.com/D_NQ_NP_705757-MLB50055948138_052022-O.webp",
     quantidadeDisponivel: "Ainda restam 10 unidades",
-    preco: "120,19 R$",
+    preco: 120.19,
   },
 ];
 

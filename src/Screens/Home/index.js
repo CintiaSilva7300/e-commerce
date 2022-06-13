@@ -20,7 +20,22 @@ function Home() {
     }, []);
 
     if (loading) {
-        return <p>Carr</p>
+        return (
+            <div>
+                <Card.Img style={{
+                    display: 'flex',
+                    marginLeft: '41%',
+                    marginTop: '12%',
+                    width: 225,
+                    height: 220,
+                }}
+                    variant="top" src='https://www.coliseumleiloes.com.br/images/loader.gif' />
+
+                <div style={{ textAlign: 'center' }}>
+                    <h1><styrong>Carregando</styrong></h1>
+                </div>
+            </div>
+        )
     }
 
     return (
@@ -32,7 +47,6 @@ function Home() {
                         return (
                             <Col md={3} style={{ textDecoration: "none", color: "#000" }}>
                                 <Card className="text-center" style={{ width: '15rem', height: 360, marginTop: 10 }}>
-
                                     <Card.Img variant="top" src={ph.img} /><Card.Body>
                                         <Card.Title style={{ fontSize: 13 }}>{ph.nome}</Card.Title>
 
