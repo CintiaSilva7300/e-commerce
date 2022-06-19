@@ -1,10 +1,12 @@
+import { getValue } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Figure, Row, Table } from "react-bootstrap";
+import { Card, CardGroup, Col, Container, Figure, Row, Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import NavbarConteiner from "../../Components/NavbarConteiner";
 import { produtosMock } from "../../utils/mock";
 
 function Carrinho() {
+
     const navigate = useNavigate();
     const [produtos, setProdutos] = useState([]);
     const [total, setTotal] = useState(0);
@@ -68,9 +70,11 @@ function Carrinho() {
                     </Col>
 
                     <Col sm={4}>
-                        <h2 style={{
-                            textAlign: 'center'
-                        }}>Total a Pagar: R$ {total.toFixed(2).toString().replace('.', ',')}</h2>
+                        <Card >
+                            <h2 style={{
+                                textAlign: 'center'
+                            }}>Total a Pagar: R$ {total.toFixed(2).toString().replace('.', ',')}</h2>
+                        </Card>
                     </Col>
                 </Row>
             </Container >

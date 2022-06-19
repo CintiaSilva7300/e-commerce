@@ -1,3 +1,4 @@
+import { getValue } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
 import { Card, Col, Container, Alert, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -9,6 +10,7 @@ import { produtosMock } from "../../utils/mock";
 function Home() {
     const [produtos, setProdutos] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
+    const [somar, setSomar] = React.useState(0);
 
     React.useEffect(() => {
         setProdutos(produtosMock);
@@ -26,7 +28,7 @@ function Home() {
                     display: 'flex',
                     marginLeft: '41%',
                     marginTop: '12%',
-                    width: 225,
+                    width: 230,
                     height: 220,
                 }}
                     variant="top" src='https://www.coliseumleiloes.com.br/images/loader.gif' />
@@ -35,8 +37,8 @@ function Home() {
                     <h1><styrong>Carregando</styrong></h1>
                 </div>
             </div>
-        )
-    }
+        );
+    };
 
     return (
         <div>

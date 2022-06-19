@@ -13,6 +13,7 @@ import AdminHome from "./Admin/Screens/HomeAdmin";
 import LoginAdmin from "./Admin/Screens/LoginAdmin";
 import Animacao from "./Components/Animacao";
 import Carrinho from "./Screens/Carrinho";
+import AdminCadastrar from "./Admin/Screens/CadastrarAdmin";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ComponentExample from "./Screens/ComponentExample";
@@ -29,12 +30,12 @@ ReactDOM.render(
         <Route path="/carrinho" element={<Carrinho />} />
 
         <Route path="/animacaoo" element={<Animacao />} />
-
         <Route path="/teste" element={<ComponentExample />} />
 
         {/* Admin */}
         <Route path="/admin/login" element={<LoginAdmin />} />
         <Route path="/admin/home" element={<AdminHome />} />
+        <Route path="/admin/cadastrar" element={<AdminCadastrar />} />
       </Route>
     </Routes>
   </BrowserRouter>,
