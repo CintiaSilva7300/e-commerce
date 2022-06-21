@@ -1,16 +1,12 @@
-import { getValue } from "@testing-library/user-event/dist/utils";
-import React, { useEffect, useState } from "react";
-import { Card, Col, Container, Alert, Row, Button } from "react-bootstrap";
+import React from "react";
+import { Card, Col, Container, Row, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import NavbarConteiner from "../../Components/NavbarConteiner";
 import { produtosMock } from "../../utils/mock";
 
-// window.alert("Vem aproveitar nossas ofertas com nosso Super Cashback")
-
 function Home() {
     const [produtos, setProdutos] = React.useState([]);
     const [loading, setLoading] = React.useState(true);
-    const [somar, setSomar] = React.useState(0);
 
     React.useEffect(() => {
         setProdutos(produtosMock);
@@ -26,15 +22,15 @@ function Home() {
             <div>
                 <Card.Img style={{
                     display: 'flex',
-                    marginLeft: '41%',
-                    marginTop: '12%',
-                    width: 230,
-                    height: 220,
+                    marginLeft: '47%',
+                    marginTop: '14%',
+                    width: 90,
+                    height: 90,
                 }}
                     variant="top" src='https://www.coliseumleiloes.com.br/images/loader.gif' />
 
-                <div style={{ textAlign: 'center' }}>
-                    <h1><styrong>Carregando</styrong></h1>
+                <div style={{ textAlign: 'center', marginTop: 10, fontSize: 2 }}>
+                    <h1 style={{ fontSize: 20 }}><styrong>Carregando...</styrong></h1>
                 </div>
             </div>
         );

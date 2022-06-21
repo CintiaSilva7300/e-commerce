@@ -26,7 +26,7 @@ function Produto() {
             return;
         }
 
-        localStorage.setItem("carrinho", id );
+        localStorage.setItem("carrinho", id);
         navigate("/carrinho");
     }
 
@@ -58,14 +58,14 @@ function Produto() {
     return (
         <div>
             <NavbarConteiner />
-            <Container style={{ marginTop: 30, fontSize: 15, fontFamily: "serif" }}>
+            <Container style={{ marginTop: 20, fontSize: 15, fontFamily: "serif" }}>
                 <Row>
                     <Col xs={12} md={4} style={{ textDecoration: "none", color: "#000" }}>
                         <Card
                             style={{
-                                width: "20rem",
-                                borderRadius: 5,
+                                width: "22rem",
                                 padding: 25,
+                                marginTop: 30
                             }}
                         >
                             <Card.Img variant="top" src={produto.img} />
@@ -83,89 +83,30 @@ function Produto() {
                                 {produto.nome} {produto.preco}
                             </h1>
                         </Badge>
+                        {/* ---------------------------------------------------------- */}
+                        <p></p>
+
+                        <Col xs={12} md={4} style={{ textDecoration: "none", color: "#000" }}>
+                            <Card
+                                style={{
+                                    width: "44rem",
+                                    height: "22rem",
+                                    marginLeft: 0,
+                                    marginTop: 30
+                                }}
+                            >
+                                <Card.Body>
+                                    <Card.Title>{produto.nome}</Card.Title>
+                                    <Card.Text>{produto.descricao2}</Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                        {/* ---------------------------------------------------------- */}
 
                         <Col>
                             <Form>
-                                <Row
-                                    style={{
-                                        marginTop: 20,
-                                        borderRadius: 10,
-                                        padding: 25,
-                                    }}
-                                >
-                                    <Col xs={12} md={8}>
-                                        <Form.Group controlId="formBasictext">
-                                            <Form.Label>Nome completo </Form.Label>
-                                            <Form.Control type="text" placeholder="Nome" />
-                                        </Form.Group>
-                                    </Col>
-
-                                    <Col xs={6} md={4}>
-                                        <Form.Group controlId="formBasictext">
-                                            <Form.Label>Cidade </Form.Label>
-                                            <Form.Control type="text" placeholder="Nome" />
-                                        </Form.Group>
-                                    </Col>
-
-                                    <Row>
-                                        <Col style={{ marginTop: 10 }}>
-                                            <Form.Group className="mb-3" controlId="formBasictext">
-                                                <h1
-                                                    style={{
-                                                        fontSize: 16,
-                                                        fontFamily: "arial",
-                                                        marginTop: 5,
-                                                    }}
-                                                >
-                                                    <strong>Dados de Pagamento</strong>
-                                                </h1>
-                                            </Form.Group>
-                                        </Col>
-                                    </Row>
-
-                                    <Col xs={12} md={7}>
-                                        <Form.Group controlId="formBasictext">
-                                            <Form.Label>Numero do Cartão </Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                placeholder="numero do Cartão"
-                                            />
-                                        </Form.Group>
-                                    </Col>
-
-                                    <Col xs={6} md={5}>
-                                        <Form.Group>
-                                            <Form.Label>Validade do Cartão</Form.Label>
-                                            <Form.Control
-                                                type="date"
-                                                placeholder="Data de Nacimento"
-                                            />
-                                        </Form.Group>
-                                    </Col>
-
-                                    <Col xs={12} md={8}>
-                                        <Form.Group controlId="formBasictext">
-                                            <Form.Label>Nome Impresso no Cartão </Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                placeholder="nome impresso no cartão"
-                                            />
-                                        </Form.Group>
-                                    </Col>
-
-                                    <Col xs={6} md={3}>
-                                        <Form.Group controlId="formBasicnumber">
-                                            <Form.Label>Codigo de Segurança </Form.Label>
-                                            <Form.Control
-                                                type="text"
-                                                placeholder="codigo de segurança"
-                                            />
-                                        </Form.Group>
-                                    </Col>
-                                </Row>
-
                                 <Button
-                                    style={{ width: "50%", marginLeft: 200, marginTop: 10 }}
+                                    style={{ width: "50%", marginLeft: 100, marginTop: 10 }}
                                     onClick={() => {
                                         navigateToCarrinho();
                                     }}

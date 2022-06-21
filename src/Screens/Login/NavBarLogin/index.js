@@ -3,6 +3,8 @@ import { Container, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Img from '../../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg';
 
+
+
 function NavBarLogin(props) {
     return (
         <div>

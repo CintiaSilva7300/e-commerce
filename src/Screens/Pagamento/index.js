@@ -1,11 +1,13 @@
 import { getValue } from "@testing-library/user-event/dist/utils";
 import React, { useEffect, useState } from "react";
-import { Card, CardGroup, Col, Container, Figure, Row, Table, Button } from "react-bootstrap";
+import { Card, Col, Container, Figure, Row, Table, Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import NavbarConteiner from "../../Components/NavbarConteiner";
 import { produtosMock } from "../../utils/mock";
+import { FaCreditCard } from "react-icons/fa";
+import { notify } from "../../Components/Toast";
 
-function Carrinho() {
+function Pagamento() {
 
     const navigate = useNavigate();
     const [produtos, setProdutos] = useState([]);
@@ -34,17 +36,26 @@ function Carrinho() {
 
     function ComprarAgora() {
         return (
-            navigate("/pagamento")
+            navigate("/sucesso")
         )
     }
+
+
 
     return (
         <div>
             <NavbarConteiner />
             <Container style={{ marginTop: 30, fontSize: 15, fontFamily: "serif" }}>
                 <Row>
+
+                    <h1 style={{
+                        marginLeft: 200,
+                        padding: 5, marginTop: 0
+                    }}><strong>Minhas Compras! </strong>
+                    </h1>
+
                     <Col sm={8}>
-                        <Table striped bordered hover >
+                        <Table striped bordered hover>
                             <thead>
                                 <tr>
                                     <th></th>
@@ -59,9 +70,9 @@ function Carrinho() {
                                         <td>
                                             <Figure>
                                                 <Figure.Image
-                                                    width={128}
-                                                    height={150}
-                                                    alt="171x180"
+                                                    width={90}
+                                                    height={50}
+                                                    alt="100x80"
                                                     src={p.img}
                                                 />
                                             </Figure>
@@ -79,7 +90,38 @@ function Carrinho() {
                         <Card >
                             <h2 style={{
                                 textAlign: 'center'
-                            }}>Total a Pagar: R$ {total.toFixed(2).toString().replace('.', ',')}</h2>
+                            }}><strong>Total Pedido R$</strong> {total.toFixed(2).toString().replace('.', ',')}</h2>
+                        </Card>
+
+                        <Card style={{ marginTop: 10, padding: 10 }}>
+                            <h3 style={{ textAlign: 'center' }}>Forma de pagamento</h3>
+
+                            <Form.Group style={{ padding: 0, fontSize: 13 }}>
+                                <Form.Check
+                                    label="Cartão de Credito"
+                                    required
+                                />
+
+                                <Row>
+                                    <Col >
+                                        <Form.Group controlId="formBasicNumber">
+                                            <Form.Label>Numero do Cartão</Form.Label>
+                                            <FaCreditCard style={{ marginLeft: 5, height: 20, width: 20 }} />
+                                            <Form.Control type="TextNumber"
+                                                placeholder="0000 0000 0000 0000" />
+
+                                            <Form.Label style={{ marginTop: 10 }}>Seu Nome *
+                                                (como no cartão)</Form.Label>
+                                            <Form.Control type="text" />
+
+                                            <Form.Label style={{ marginTop: 10 }}>Código de Segurança (cvv) *</Form.Label>
+                                            <Form.Control type="text" />
+                                        </Form.Group>
+                                    </Col>
+                                </Row>
+                            </Form.Group>
+
+
                         </Card>
 
                         <Button type="button"
@@ -98,4 +140,5 @@ function Carrinho() {
     );
 }
 
-export default Carrinho;
+export default Pagamento;
+
