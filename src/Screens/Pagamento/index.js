@@ -4,7 +4,7 @@ import { Card, Col, Container, Figure, Row, Table, Button, Form } from "react-bo
 import { useNavigate } from "react-router-dom";
 import NavbarConteiner from "../../Components/NavbarConteiner";
 import { produtosMock } from "../../utils/mock";
-import { FaCreditCard } from "react-icons/fa";
+import { FaCreditCard, FaStarOfLife } from "react-icons/fa";
 import { notify } from "../../Components/Toast";
 
 function Pagamento() {
@@ -110,7 +110,9 @@ function Pagamento() {
                                             <Form.Control type="TextNumber"
                                                 placeholder="0000 0000 0000 0000" />
 
-                                            <Form.Label style={{ marginTop: 10 }}>Seu Nome *
+                                            <Form.Label style={{ marginTop: 10 }}>
+                                                {/* <FaStarOfLife style={{ color: 'red', fontSize: 5 }} /> */}
+                                                Seu Nome *
                                                 (como no cartão)</Form.Label>
                                             <Form.Control type="text" />
 

@@ -54,7 +54,7 @@ function NavbarConteiner(props) {
                                 <Avatar alt="Remy Sharp" src={usuario.img} />
 
                                 <NavDropdown
-                                    style={{ color: "#FFF", textDecoration: "none", fontSize: 20, }}
+                                    style={{ background: "#FFF", textDecoration: "none", fontSize: 20, }}
                                     title={usuario.nome}
                                     id="basic-nav-dropdown"
                                 >
