@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import Img from "../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg";
+// import usuarios from "../../utils/mock";
 
 import Avatar from '@mui/material/Avatar';
 
-function NavbarConteiner(props) {
+function NavPerfilDoUsuario(props) {
 
     const [usuario, setUsuario] = useState();
 
     useEffect(() => {
         const userInfo = localStorage.getItem("userInfo");
+
         if (userInfo) {
             setUsuario(JSON.parse(userInfo));
         }
@@ -25,7 +27,6 @@ function NavbarConteiner(props) {
                             <img src={Img} width="170" height="50" />
                         </Link>
                     </Navbar.Brand>
-
                     <Navbar.Collapse className="justify-content-end">
                         {!usuario && (
                             <Navbar.Text>
@@ -46,6 +47,7 @@ function NavbarConteiner(props) {
 
                         {usuario && (
                             <div style={{ display: 'flex' }}>
+
                                 <Avatar alt="Remy Sharp" src={usuario.img} />
                                 <NavDropdown
                                     title={usuario.nome}
@@ -67,4 +69,4 @@ function NavbarConteiner(props) {
     );
 }
 
-export default NavbarConteiner;
+export default NavPerfilDoUsuario;

@@ -28,7 +28,6 @@ function Home() {
                     height: 90,
                 }}
                     variant="top" src='https://www.coliseumleiloes.com.br/images/loader.gif' />
-
                 <div style={{ textAlign: 'center', marginTop: 10, fontSize: 2 }}>
                     <h1 style={{ fontSize: 20 }}><styrong>Carregando...</styrong></h1>
                 </div>
@@ -47,9 +46,7 @@ function Home() {
                                 <Card className="text-center" style={{ width: '15rem', height: 360, marginTop: 10 }}>
                                     <Card.Img variant="top" src={ph.img} /><Card.Body>
                                         <Card.Title style={{ fontSize: 13 }}>{ph.nome}</Card.Title>
-
                                         <Card.Text style={{ fontSize: 12 }}>{ph.quantidadeDisponivel}</Card.Text>
-
                                         <Link to={"/produto/?id=" + ph.id}>
                                             <Button variant="outline-dark">Comprar</Button>
                                         </Link>
