@@ -6,18 +6,30 @@ import { notify } from "../../Components/Toast";
 import Titulos from "../../Components/Titles/index";
 import NavBarLogin from "../../Screens/Login/NavBarLogin";
 import FomularioLogin from "../../Components/FormularioLogin";
-import { autenticar } from "../../Business/login";
+import axios from "axios";
 
 function Login() {
     const [email, setEmail] = useState();
     const [senha, setSenha] = useState();
     const navigate = useNavigate();
 
-    function login() {
-        if (autenticar(email, senha)) {
-            navigate("/");
-        } else {
-            notify("Não foi possivel autenticar");
+    async function login() {
+        try {
+            const response = await axios.post(
+                "http://64.227.71.102:8081/api/usuarios/login",
+                {
+                    email: email,
+                    senha: senha,
+                }
+            );
+
+            if (response.data) {
+                localStorage.setItem("userInfo", JSON.stringify(response.data));
+                navigate("/");
+            }
+        } catch (error) {
+            console.log(error);
+            notify(error?.response?.data?.message || "Não foi possivel autenticar");
         }
     }
 

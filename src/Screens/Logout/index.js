@@ -1,12 +1,13 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { deslogar } from "../../Business/login";
+// import { deslogar } from "../../Business/login";
 
 function Logout() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        deslogar();
+        localStorage.removeItem("userInfo");
+        // deslogar();
         navigate("/");
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);

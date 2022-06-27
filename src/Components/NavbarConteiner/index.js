@@ -22,7 +22,7 @@ function NavbarConteiner(props) {
                 <Container>
                     <Navbar.Brand>
                         <Link to="/" style={{ color: "#FFF", textDecoration: "none" }}>
-                            <img src={Img} width="170" height="50" />
+                            <img src={Img} width="170" height="50" alt="imagem do produto" />
                         </Link>
                     </Navbar.Brand>
 

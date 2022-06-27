@@ -123,7 +123,15 @@ export const usuarios = [
     email: "henrique@gmail.com",
     senha: "123456",
     nome: "Henrique Valentim",
-    img: "https://scontent.fgru19-1.fna.fbcdn.net/v/t31.18172-8/21316203_1572975386130172_250870698191768554_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeENkVkFwIopzXSstxfP4V-VSuKji9zW0Y5K4qOL3NbRjjqOtfHDJNxDICZylDcuJrLvabGsbuCix01zfryHfhQt&_nc_ohc=qm0w-_3mhXUAX-Mhibb&_nc_ht=scontent.fgru19-1.fna&oh=00_AT_JzTZkmEVNL9bnKhgQoXk2RfQW4_brVyd3JllBVJkpLw&oe=62D4F59C"
+    img: "https://scontent.fgru19-1.fna.fbcdn.net/v/t31.18172-8/21316203_1572975386130172_250870698191768554_o.jpg?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeENkVkFwIopzXSstxfP4V-VSuKji9zW0Y5K4qOL3NbRjjqOtfHDJNxDICZylDcuJrLvabGsbuCix01zfryHfhQt&_nc_ohc=qm0w-_3mhXUAX-Mhibb&_nc_ht=scontent.fgru19-1.fna&oh=00_AT_JzTZkmEVNL9bnKhgQoXk2RfQW4_brVyd3JllBVJkpLw&oe=62D4F59C",
+
+    endereco: {
+      rua: "seilaa",
+      numero: "123",
+      estado: "São Paulo",
+      logradouro: "seilaaaaaaaaaaaa"
+    }
+
   },
   {
     id: 3,

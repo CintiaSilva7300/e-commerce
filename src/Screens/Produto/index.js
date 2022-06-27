@@ -58,63 +58,65 @@ function Produto() {
     return (
         <div>
             <NavbarConteiner />
-            <Container style={{ marginTop: 20, fontSize: 15, fontFamily: "serif" }}>
+            <Container style={{ fontSize: 15, fontFamily: "serif" }}>
                 <Row>
                     <Col xs={12} md={4} style={{ textDecoration: "none", color: "#000" }}>
                         <Card
                             style={{
-                                width: "22rem",
-                                padding: 25,
+                                width: "30rem",
+                                // padding: 25,
                                 marginTop: 30
                             }}
                         >
                             <Card.Img variant="top" src={produto.img} />
                             <Card.Body>
-                                <Card.Title>{produto.nome}</Card.Title>
+                                {/* <Card.Title>{produto.nome}</Card.Title> */}
 
-                                <Card.Text>{produto.descricao}</Card.Text>
+                                {/* <Card.Text>{produto.descricao}</Card.Text> */}
                             </Card.Body>
                         </Card>
                     </Col>
 
                     <Col>
-                        <Badge pill bg="dark" style={{ padding: 10, marginLeft: 90 }}>
+                        {/* <Badge pill bg="dark" style={{ padding: 10, marginLeft: 90 }}>
                             <h1>
                                 {produto.nome} {produto.preco}
                             </h1>
-                        </Badge>
+                        </Badge> */}
                         {/* ---------------------------------------------------------- */}
                         <p></p>
 
                         <Col xs={12} md={4} style={{ textDecoration: "none", color: "#000" }}>
                             <Card
                                 style={{
-                                    width: "44rem",
-                                    height: "22rem",
-                                    marginLeft: 0,
+                                    width: "30rem",
+                                    height: "15rem",
+                                    marginLeft: '50%',
                                     marginTop: 30
                                 }}
                             >
                                 <Card.Body>
                                     <Card.Title>{produto.nome}</Card.Title>
-                                    <Card.Text>{produto.descricao2}</Card.Text>
+                                    {/* <Card.Text>{produto.descricao2}</Card.Text> */}
                                 </Card.Body>
+
+                                <div style={{ display: 'flex', justifyContent: 'center', padding: 20 }}>
+                                    <Button
+                                        style={{ width: "40%" }}
+                                        onClick={() => {
+                                            navigateToCarrinho();
+                                        }}
+                                        variant="outline-dark"
+                                    >
+                                        Adicionar no carrinho
+                                    </Button>
+                                </div>
                             </Card>
                         </Col>
                         {/* ---------------------------------------------------------- */}
 
                         <Col>
-                            <Form>
-                                <Button
-                                    style={{ width: "50%", marginLeft: 100, marginTop: 10 }}
-                                    onClick={() => {
-                                        navigateToCarrinho();
-                                    }}
-                                    variant="outline-dark"
-                                >
-                                    Adicionar no carrinho
-                                </Button>
-                            </Form>
+
                         </Col>
                     </Col>
                 </Row>
