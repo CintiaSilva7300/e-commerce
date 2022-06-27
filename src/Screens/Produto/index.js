@@ -6,10 +6,8 @@ import {
     Row,
     Button,
     Badge,
-    InputGroup,
-    Form,
 } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import NavbarConteiner from "../../Components/NavbarConteiner";
 import { produtosMock } from "../../utils/mock";
 
@@ -78,26 +76,28 @@ function Produto() {
                     </Col>
 
                     <Col>
-                        {/* <Badge pill bg="dark" style={{ padding: 10, marginLeft: 90 }}>
-                            <h1>
-                                {produto.nome} {produto.preco}
-                            </h1>
-                        </Badge> */}
-                        {/* ---------------------------------------------------------- */}
-                        <p></p>
-
                         <Col xs={12} md={4} style={{ textDecoration: "none", color: "#000" }}>
                             <Card
                                 style={{
-                                    width: "30rem",
-                                    height: "15rem",
+                                    width: "35rem",
+                                    height: "20rem",
                                     marginLeft: '50%',
                                     marginTop: 30
                                 }}
                             >
                                 <Card.Body>
                                     <Card.Title>{produto.nome}</Card.Title>
+
                                     {/* <Card.Text>{produto.descricao2}</Card.Text> */}
+                                    <div style={{ display: 'flex' }}>
+                                        <p style={{ textDecoration: 'line-through' }}>{produto.preco}</p>
+                                        <Badge style={{ height: 17, margin: 1, fontSize: 11 }} bg="success">10%</Badge>
+                                    </div>
+                                    <strong>
+                                        <h1 style={{ marginTop: -10 }}> R${produto.preco.toString().replace(".", ",")}  </h1>
+                                        <p style={{ marginTop: -15 }}>Á vista no Cartão de Credito</p>
+                                        <h1 style={{ marginTop: 15, fontSize: 20, fontFamily: 'bold' }}>R$ {produto.preco.toString().replace(".", ",")} em até 3x de {produto.preco.toString().replace(".", ",")}</h1>
+                                    </strong>
                                 </Card.Body>
 
                                 <div style={{ display: 'flex', justifyContent: 'center', padding: 20 }}>
@@ -112,11 +112,6 @@ function Produto() {
                                     </Button>
                                 </div>
                             </Card>
-                        </Col>
-                        {/* ---------------------------------------------------------- */}
-
-                        <Col>
-
                         </Col>
                     </Col>
                 </Row>
