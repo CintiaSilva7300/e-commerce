@@ -67,11 +67,6 @@ function Produto() {
                             }}
                         >
                             <Card.Img variant="top" src={produto.img} />
-                            <Card.Body>
-                                {/* <Card.Title>{produto.nome}</Card.Title> */}
-
-                                {/* <Card.Text>{produto.descricao}</Card.Text> */}
-                            </Card.Body>
                         </Card>
                     </Col>
 
@@ -90,7 +85,7 @@ function Produto() {
 
                                     {/* <Card.Text>{produto.descricao2}</Card.Text> */}
                                     <div style={{ display: 'flex' }}>
-                                        <p style={{ textDecoration: 'line-through' }}>{produto.preco}</p>
+                                        <p style={{ textDecoration: 'line-through' }}>{produto.preco.toString().replace(".", ",")}</p>
                                         <Badge style={{ height: 17, margin: 1, fontSize: 11 }} bg="success">10%</Badge>
                                     </div>
                                     <strong>

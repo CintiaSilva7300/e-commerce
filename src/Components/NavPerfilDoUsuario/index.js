@@ -1,14 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Img from "../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg";
+import { FaShoppingCart } from "react-icons/fa";
 // import usuarios from "../../utils/mock";
 
 import Avatar from '@mui/material/Avatar';
+import { TextField } from "material-ui";
 
 function NavPerfilDoUsuario(props) {
 
     const [usuario, setUsuario] = useState();
+    const navigate = useNavigate();
+
+    function NavCarinho2() {
+        navigate("/carrinho");
+    }
 
     useEffect(() => {
         const userInfo = localStorage.getItem("userInfo");
@@ -22,9 +29,13 @@ function NavPerfilDoUsuario(props) {
         <div>
             <Navbar bg="dark">
                 <Container>
+                    <FaShoppingCart style={{ color: '#FFF', height: 25, width: 25, margin: 5 }} onClick={() => {
+                        NavCarinho2();
+                    }} />
+
                     <Navbar.Brand>
                         <Link to="/" style={{ color: "#FFF", textDecoration: "none" }}>
-                            <img src={Img} width="170" height="50" />
+                            <img src={Img} width="170" height="50" alt="img" />
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Collapse className="justify-content-end">
@@ -44,6 +55,7 @@ function NavPerfilDoUsuario(props) {
                                 </Link>
                             </Navbar.Text>
                         )}
+
 
                         {usuario && (
                             <div style={{ display: 'flex' }}>

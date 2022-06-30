@@ -44,13 +44,12 @@ function Home() {
                         return (
                             <Col md={3} style={{ textDecoration: "none", color: "#000" }}>
                                 <Card className="text-center" style={{ width: '15rem', height: 360, marginTop: 10 }}>
-                                    <Card.Img variant="top" src={ph.img} /><Card.Body>
-                                        <Card.Title style={{ fontSize: 13 }}>{ph.nome}</Card.Title>
-                                        <Card.Text style={{ fontSize: 12 }}>{ph.quantidadeDisponivel}</Card.Text>
-                                        <Link to={"/produto/?id=" + ph.id}>
-                                            <Button variant="outline-dark">Comprar</Button>
-                                        </Link>
-                                    </Card.Body>
+                                    <Link style={{ textDecoration: 'none', color: "#000" }} to={"/produto/?id=" + ph.id}>
+                                        <Card.Img variant="top" src={ph.img} /><Card.Body>
+                                            <Card.Text style={{ fontSize: 13 }}>{ph.nome}</Card.Text>
+                                            <Card.Text style={{ fontSize: 12, marginTop: -20 }}>{ph.quantidadeDisponivel}</Card.Text>
+                                        </Card.Body>
+                                    </Link>
                                 </Card>
                             </Col>
                         );

@@ -45,11 +45,11 @@ function Cadastro() {
             if (response?.data) {
                 navigate("/login");
             } else {
-                notify("Certificar-se de que esta tudo preenchido");
+                notify("Certificar-se de que estaja todos os campos preenchido");
                 console.log("falha no login");
             }
         } catch (error) {
-            notify("Certificar-se de que esta tudo preenchido", error);
+            notify("Certificar-se de que estaja todos os campos preenchido", error);
 
         }
     }
@@ -76,7 +76,7 @@ function Cadastro() {
                 <Container>
                     <Navbar.Brand>
                         <Link to="/" style={{ color: "#FFF", textDecoration: "none" }}>
-                            <img src={Img} width="170" height="50" />
+                            <img src={Img} width="170" height="50" alt="img" />
                         </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle />

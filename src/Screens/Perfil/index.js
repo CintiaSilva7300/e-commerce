@@ -69,7 +69,7 @@ function Perfil() {
                             </Button>
 
                             {showElement ? <div>
-                                <h1>Dados dos Cartões</h1>
+                                <h5>Dados dos Cartões</h5>
                                 <Form.Control style={{ marginTop: 5 }} placeholder={user?.nome} disabled={flag} />
                                 <Form.Control style={{ marginTop: 5 }} placeholder={user?.cpf} disabled={flag} />
                                 <Form.Control style={{ marginTop: 5 }} placeholder={user?.telefone} disabled={flag} />
@@ -79,8 +79,6 @@ function Perfil() {
                                 <Form.Control style={{ marginTop: 5 }} placeholder={user?.numeroCasa} disabled={flag} />
                                 <Form.Control style={{ marginTop: 5 }} placeholder={user?.logradouro} disabled={flag} />
                                 <Form.Control style={{ marginTop: 5 }} placeholder={user?.estado} disabled={flag} />
-
-
                             </div> : null}
                         </div>
                     </Col>

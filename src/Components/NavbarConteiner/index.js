@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
-import { Link, NavLink } from "react-router-dom";
+import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import Img from "../../Components/Img/WhatsApp Image 2022-05-02 at 14.16.41.jpeg";
+import { FaShoppingCart } from "react-icons/fa";
 
 import Avatar from '@mui/material/Avatar';
 
 function NavbarConteiner(props) {
-
     const [usuario, setUsuario] = useState();
+    const navigate = useNavigate();
+
+    function NavCarinho() {
+        navigate("/carrinho");
+    }
+
+
 
     useEffect(() => {
         const userInfo = localStorage.getItem("userInfo");
@@ -20,6 +27,10 @@ function NavbarConteiner(props) {
         <div>
             <Navbar bg="dark">
                 <Container>
+                    <FaShoppingCart style={{ color: '#FFF', height: 25, width: 25, margin: 5 }} onClick={() => {
+                        NavCarinho();
+                    }} />
+
                     <Navbar.Brand>
                         <Link to="/" style={{ color: "#FFF", textDecoration: "none" }}>
                             <img src={Img} width="170" height="50" alt="imagem do produto" />
@@ -41,6 +52,13 @@ function NavbarConteiner(props) {
                                 >
                                     / Cadastrar-se
                                 </Link>
+
+
+                                <FaShoppingCart style={{ color: '#FFF', height: 25, width: 25, margin: 5 }} onClick={() => {
+                                    NavCarinho();
+                                }} Carrinho />
+
+
                             </Navbar.Text>
                         )}
 
